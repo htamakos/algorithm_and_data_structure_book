@@ -12,7 +12,7 @@ mkdir -p $TESTDIR
 
 cat <<'EOS' > $BASEDIR/.gitignore
 build
-<<EOS
+EOS
 
 cat <<'EOS' > $BASEDIR/CMakeLists.txt
 

@@ -24,8 +24,7 @@ T knapsack(std::vector<T>& weight,
   std::vector<std::vector<T>> dp(N + 1, std::vector<T>(W + 1, 0));
 
   // DP ループ
-  for(std::size_t i = 0; i < N; ++i)
-  {
+  for (std::size_t i = 0; i < N; ++i) {
     for(T w = 0; w <= W; ++w)
     {
       // i番目の品物を選ぶ場合
@@ -44,10 +43,8 @@ T knapsack(std::vector<T>& weight,
   return dp[N][W];
 }
 
-template<class T>
-void print_all(std::ostream& stream,
-               std::vector<std::vector<T>> datum)
-{
+template <class T>
+void print_all(std::ostream& stream, std::vector<std::vector<T>> datum) {
   std::size_t i = 0;
   for(auto& data : datum)
   {
