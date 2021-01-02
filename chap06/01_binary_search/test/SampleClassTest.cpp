@@ -11,6 +11,11 @@ TEST(calc, normal) {
 
   std::size_t index = my_binary_search(std::begin(v), std::end(v), 11);
 
+  auto first = v.begin();
+  auto last = v.end();
+
+  index = my_binary_search(first, last, 11);
+
   ASSERT_EQ(4, index);
 }
 

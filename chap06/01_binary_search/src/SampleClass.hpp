@@ -12,6 +12,13 @@ std::size_t _my_binary_search(Iterator&& first, Iterator&& last, K key,
                               std::bidirectional_iterator_tag);
 
 template <class Iterator, class K>
+std::size_t my_binary_search(Iterator& first, Iterator& last, K key) {
+  return _my_binary_search(
+      first, last, key,
+      typename std::iterator_traits<Iterator>::iterator_category());
+}
+
+template <class Iterator, class K>
 std::size_t my_binary_search(Iterator&& first, Iterator&& last, K key) {
   return _my_binary_search(
       first, last, key,
